@@ -1,1 +1,42 @@
-<p>timesheet-listing works!</p>
+<div class="container">
+    <h2>Timesheet Entries</h2>
+
+    <div class="search-bar">
+        <label for="task">Task</label>
+        <input id="task" (ngModel)="searchTask" placeholder="Enter task name" />
+        <button class="btn btn-primary" (click)="onSearch()">Search</button>
+        <button class="btn btn-secondary" (click)="onCreate()">Create</button>
+    </div>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Project</th>
+                <th>Task</th>
+                <th>Assigned To</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let entry of timesheetEntries">
+                <td>{{ entry.project }}</td>
+                <td>{{ entry.task }}</td>
+                <td>{{ entry.assignedTo }}</td>
+                <td>{{ entry.from | date: 'dd-MM-yyyy' }}</td>
+                <td>{{ entry.to | date: 'dd-MM-yyyy' }}</td>
+                <td>{{ entry.status }}</td>
+                <td>
+                    <button class="btn btn-sm btn-info" (click)="onEdit(entry.id)">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn btn-sm btn-danger" (click)="onDelete(entry.id)">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -10,15 +10,26 @@ h2 {
   font-family: 'Montserrat', sans-serif;
 }
 
+#task {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .search-bar {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  justify-content: center;
+  padding: 15px;
+  border: 1px solid #ecebeb;
+  border-radius: 2px;
+  background-color: #fdfdfd;
 }
 
 .search-bar label {
   margin-right: 10px;
   font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  justify-content: center;
 }
 
 .search-bar input {
@@ -55,22 +66,27 @@ td {
 
 button {
   cursor: pointer;
+  border-radius: 4px;
 }
 
 button i {
   margin-right: 5px;
+  
 }
 
 .btn-primary, .btn-secondary {
   padding: 6px 12px;
   font-size: 14px;
-  font-family: 'Montserrat', sans-serif
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgb(18, 92, 183);
+  border-color: rgb(18, 92, 183);
+  color: #ffff;
 }
 
 .btn-info {
   color: white;
-  background-color: #17a2b8;
-  border-color: #17a2b8;
+  background-color: rgb(18, 92, 183);
+  border-color: rgb(18, 92, 183);
 }
 
 .btn-danger {

@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
 })
 export class TimesheetListingComponent implements OnInit {
-  timesheetEntries: any[] = [];
+  //timesheetEntries: Timesheet[] = [];
   searchTask: string = '';
 
   constructor() {}
